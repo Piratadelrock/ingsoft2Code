@@ -19,11 +19,6 @@
 	</build>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.mipresupuesto.personalbudget</groupId>
-			<artifactId>PersonalBudget_Domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 
 		<dependency>
 			<groupId>com.mipresupuesto.personalbudget</groupId>
@@ -35,6 +30,23 @@
 			<artifactId>PersonalBudgetCrossCutting</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.mipresupuesto.personalbudget</groupId>
+			<artifactId>PersonalBudget_Domain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mipresupuesto.personalbudget</groupId>
+			<artifactId>PersonalBudget_Entity</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mipresupuesto.personalbudget</groupId>
+			<artifactId>PersonalBudget_Dto</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 
 	</dependencies>
 </project>
