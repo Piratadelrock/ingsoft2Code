@@ -7,7 +7,7 @@ public class YearDomainBuilder {
 	private int year;
 	
 	private YearDomainBuilder() {
-	
+		
 		setId("");
 		setYear(0);
 	}
@@ -17,6 +17,7 @@ public class YearDomainBuilder {
 	}
 
 	public final YearDomainBuilder setId(String id) {
+		
 		this.id = (id==null) ? "": id.trim();
 		return this;
 	}
