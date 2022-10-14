@@ -2,6 +2,8 @@ package com.mipresupuesto.personalbudget.entity;
 
 import java.util.UUID;
 
+import com.mipresupuesto.personalbudget.crosscutting.utils.UtilUUID;
+
 public class YearEntity {
 
 	private UUID id;
@@ -20,6 +22,9 @@ public class YearEntity {
 	}
 	
 	public final UUID getId() {
+		if (id == null) {
+			setId(UtilUUID.DEFAULT_UUID);
+		}
 		return id;
 	}
 	public final void setId(UUID id) {
