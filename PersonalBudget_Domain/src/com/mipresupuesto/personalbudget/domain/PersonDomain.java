@@ -1,13 +1,15 @@
 package com.mipresupuesto.personalbudget.domain;
 
+import java.util.UUID;
+
 public class PersonDomain {
-	private String id;
+	private UUID id;
 	private String idCard;
 	private String firstName;
 	private String middleName;
 	private String lastName;
 	
-	private PersonDomain(String id, String idCard, String firstName, String middleName,String lastName){
+	private PersonDomain(final UUID id, final String idCard, final String firstName, final String middleName,final String lastName){
 		setId(id);
 		setIdCard(idCard);
 		setFirstName(firstName);
@@ -16,12 +18,14 @@ public class PersonDomain {
 		
 	}
 
-	public static PersonDomain create(String id, String idCard, String firstName, String middleName,String lastName) {
+	public static PersonDomain create(final UUID id, final String idCard, final String firstName, final String middleName,final String lastName) {
 		return new PersonDomain(id, idCard, firstName, middleName, lastName);
 	}
 
-	private final void setId(String id) {
-		this.id = id;
+	private final void setId(UUID id) {
+
+		this.id = (id == null) ? UUID.randomUUID(): id;		
+	
 	}
 
 	private final void setIdCard(String idCard) {
@@ -40,7 +44,7 @@ public class PersonDomain {
 		this.lastName = lastName;
 	}
 
-	public final String getId() {
+	public final UUID getId() {
 		return id;
 	}
 

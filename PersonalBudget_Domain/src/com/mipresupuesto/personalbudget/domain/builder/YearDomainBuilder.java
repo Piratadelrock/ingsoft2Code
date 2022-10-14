@@ -1,14 +1,16 @@
 package com.mipresupuesto.personalbudget.domain.builder;
 
+import java.util.UUID;
+
 import com.mipresupuesto.personalbudget.domain.YearDomain;
 
 public class YearDomainBuilder {
-	private String id; 
+	private UUID id; 
 	private int year;
 	
 	private YearDomainBuilder() {
 		
-		setId("");
+		setId(UUID.randomUUID());
 		setYear(0);
 	}
 	
@@ -16,9 +18,8 @@ public class YearDomainBuilder {
 		return new YearDomainBuilder();
 	}
 
-	public final YearDomainBuilder setId(String id) {
-		
-		this.id = (id==null) ? "": id.trim();
+	public final YearDomainBuilder setId(UUID id) {
+		this.id = (id == null) ? UUID.randomUUID(): id;
 		return this;
 	}
 
@@ -27,7 +28,7 @@ public class YearDomainBuilder {
 		return this;
 	}
 
-	private final String getId() {
+	private final UUID getId() {
 		return id;
 	}
 
@@ -46,11 +47,11 @@ public class YearDomainBuilder {
 		
 		
 		YearDomain myYear = YearDomainBuilder.get().setYear(2020).build();
-		YearDomain myYearTwo = YearDomainBuilder.get().setId("123").build();
+		YearDomain myYearTwo = YearDomainBuilder.get().setId(null).build();
 		
-		YearDomain myYearThree = YearDomainBuilder.get().setId("123").build();
+		YearDomain myYearThree = YearDomainBuilder.get().setId(null).build();
 		YearDomain myYearFour = YearDomainBuilder.get().build();
-		YearDomain myYearFive = YearDomainBuilder.get().setYear(2020).setId("123").build();
+		YearDomain myYearFive = YearDomainBuilder.get().setYear(2020).setId(null).build();
 		
 	}
 	

@@ -11,11 +11,30 @@ public class PersonEntity {
 	private String firstSurname;
 	private String secondSurname;
 	
+	public PersonEntity() {
+		
+		setIdCard("");
+		setFirstName("");
+		setMiddleName("");
+		setFirstSurname("");
+		setSecondSurname("");
+		
+	}
 	
+	public PersonEntity(UUID id, String idCard, String firstName, String middleName, String firstSurname,
+			String secondSurname) {
+		setId(id);
+		setIdCard(idCard);
+		setFirstName(firstName);
+		setMiddleName(middleName);
+		setFirstSurname(firstSurname);
+		setSecondSurname(secondSurname);
+		
+	}
 	public final UUID getId() {
 		return id;
 	}
-	public final void setId(String id) {
+	public final void setId(UUID id) {
 		this.id = id;
 	}
 	public final String getIdCard() {
