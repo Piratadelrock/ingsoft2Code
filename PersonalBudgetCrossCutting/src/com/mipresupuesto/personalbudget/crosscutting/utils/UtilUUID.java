@@ -43,6 +43,17 @@ public class UtilUUID {
 		return uuid;
 	}
 	
+	public static final String getStringFromUUID(final UUID uuid) {
+		String uuidString = DEFAULT_UUID_STRING;
+		if (uuid == null) {
+			uuidString =  uuid.toString();
+			
+			
+		}
+		return uuidString;
+		
+	}
+	
 //	public static void main(String[] args) {
 //		System.out.println(DEFAULT_UUID);
 //		

@@ -24,9 +24,16 @@ public class YearDtoAssembler implements DTOAssembler<YearDTO, YearDomain> {
 	}
 
 	@Override
-	public YearDTO assembleDTO(YearDomain domain) {
+	public YearDTO assembleDTO(final YearDomain domain) {
 		// TODO Auto-generated method stub
-		return null;
+		YearDTO dto = new YearDTO();
+		
+		if (domain != null) {
+			dto = new YearDTO(UtilUUID
+					.getStringFromUUID(domain.getId(),domain.getYear());
+		} 
+
+		return dto;
 	}
 	
 }
