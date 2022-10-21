@@ -3,25 +3,39 @@ package com.mipresupuesto.personalbudget.domain;
 import java.util.UUID;
 
 public class PersonDomain {
+
+//	private String lastName;
 	private UUID id;
 	private String idCard;
 	private String firstName;
 	private String middleName;
-	private String lastName;
+	private String firstSureName;
+	private String secondSureName;
 	
-	private PersonDomain(final UUID id, final String idCard, final String firstName, final String middleName,final String lastName){
+	private PersonDomain(final UUID id, final String idCard, final String firstName, final String middleName,final String firstSureName, final String secondSureName){
 		setId(id);
 		setIdCard(idCard);
 		setFirstName(firstName);
 		setMiddleName(middleName);
-		setLastName(lastName);
+		setFirstSureName(firstSureName);
+		setSecondSureName(secondSureName);
 		
 	}
 
-	public static PersonDomain create(final UUID id, final String idCard, final String firstName, final String middleName,final String lastName) {
-		return new PersonDomain(id, idCard, firstName, middleName, lastName);
-	}
+//	public static PersonDomain create(final UUID id, final String idCard, final String firstName, final String middleName, final String firstSureName, final String secondSureName) {
+//		return new PersonDomain(id, idCard, firstName, middleName, firstSureName, secondSureName);
+//	}
 
+	public static PersonDomain create(
+			final UUID id, 
+			final String idCard,
+			final String firstName, 
+			final String middleName, 
+			final String firstSureName, 
+			final String secondSureName) {
+		return new PersonDomain(id, idCard, firstName, middleName, firstSureName, secondSureName);
+		
+	}
 	private final void setId(UUID id) {
 
 		this.id = (id == null) ? UUID.randomUUID(): id;		
@@ -29,9 +43,12 @@ public class PersonDomain {
 	}
 
 	private final void setIdCard(String idCard) {
-		this.idCard = idCard;
+//		this.idCard = idCard;
+//		this.idCard = (idCard == null) ? PersonDomainBuilder.get(): idCard;
+		this.idCard = (idCard == null) ? "": idCard;
 	}
 
+	
 	private final void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -40,16 +57,21 @@ public class PersonDomain {
 		this.middleName = middleName;
 	}
 
-	private final void setLastName(String lastName) {
-		this.lastName = lastName;
+
+
+	private void setFirstSureName(String firstSureName) {
+		this.firstSureName = firstSureName;
+	}
+	private void setSecondSureName(String secondSureName) {
+		this.secondSureName = secondSureName;
+	}
+	
+	public final String getIdCard() {
+		return idCard;
 	}
 
 	public final UUID getId() {
 		return id;
-	}
-
-	public final String getIdCard() {
-		return idCard;
 	}
 
 	public final String getFirstName() {
@@ -60,17 +82,23 @@ public class PersonDomain {
 		return middleName;
 	}
 
-	public final String getLastName() {
-		return lastName;
+	public final String getFirstSureName() {
+		return firstSureName;
 	}
 	
-	public final String getName() {
-		return (getFirstName()+""+ getMiddleName().trim());
+	public final String getSecondSureName() {
+		return secondSureName;
 	}
-
-	public final String getCompleteName() {
-		return (getName()+""+ getLastName());
-	}
+	
+	 public final String getLastName() {
+		 return (getFirstSureName()+ " " + getSecondSureName()).trim();
+	 }
+	 public final String getName() {
+		 return (getFirstName()+ " " + getMiddleName()).trim();
+	 }
+	 public final String getCompleteName() {
+		 return (getName()+ " " + getLastName()).trim();
+	 }
 
 	
 }

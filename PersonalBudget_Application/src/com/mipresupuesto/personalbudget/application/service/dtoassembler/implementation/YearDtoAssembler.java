@@ -1,6 +1,6 @@
-package com.mipresupuesto.personalbudget.application.dtoassembler.implementation;
+package com.mipresupuesto.personalbudget.application.service.dtoassembler.implementation;
 
-import com.mipresupuesto.personalbudget.application.dtoassembler.DTOAssembler;
+import com.mipresupuesto.personalbudget.application.service.dtoassembler.DTOAssembler;
 import com.mipresupuesto.personalbudget.crosscutting.utils.UtilUUID;
 import com.mipresupuesto.personalbudget.domain.YearDomain;
 import com.mipresupuesto.personalbudget.domain.builder.YearDomainBuilder;
@@ -24,13 +24,13 @@ public class YearDtoAssembler implements DTOAssembler<YearDTO, YearDomain> {
 	}
 
 	@Override
-	public YearDTO assembleDTO(final YearDomain domain) {
+	public final YearDTO assembleDTO(final YearDomain domain) {
 		// TODO Auto-generated method stub
 		YearDTO dto = new YearDTO();
 		
 		if (domain != null) {
 			dto = new YearDTO(UtilUUID
-					.getStringFromUUID(domain.getId(),domain.getYear());
+					.getStringFromUUID(domain.getId()),domain.getYear());
 		} 
 
 		return dto;

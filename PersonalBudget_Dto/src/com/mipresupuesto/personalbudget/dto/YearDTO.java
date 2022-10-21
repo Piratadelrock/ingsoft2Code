@@ -5,7 +5,7 @@ public class YearDTO {
 	private String id;
 	private int year;
 	
-	private YearDTO() {
+	public YearDTO() {
 		setId("");
 		setYear(0);
 	}

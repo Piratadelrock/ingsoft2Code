@@ -36,7 +36,7 @@ public class UtilUUID {
 				uuid = UUID.fromString(uuidString);
 				
 			} catch (IllegalArgumentException e) {
-				// TODO: falta que usted gestione la excepcion !!!
+				// TODO: handle exception falta que usted gestione la excepcion !!!
 			}
 			
 		}
@@ -46,9 +46,7 @@ public class UtilUUID {
 	public static final String getStringFromUUID(final UUID uuid) {
 		String uuidString = DEFAULT_UUID_STRING;
 		if (uuid == null) {
-			uuidString =  uuid.toString();
-			
-			
+			uuidString =  uuid.toString();			
 		}
 		return uuidString;
 		

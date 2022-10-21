@@ -3,6 +3,7 @@ package com.mipresupuesto.personalbudget.domain;
 import java.util.UUID;
 
 public class YearDomain {
+	
 	private  UUID id;
 	private  int year;
 	
@@ -24,23 +25,23 @@ public class YearDomain {
 	}
 
 	private final void setId(final UUID id) {
-		
 		this.id = (id == null) ? UUID.randomUUID(): id;
+		
 	}
 
 	private final void setYear(int year) {
 		this.year = year;
 	}
 	
-	public static void main(String[] args) {
-		UUID miUUID = UUID.randomUUID();
-		String miUUIDString = miUUID.toString();
-		UUID otroUUID = UUID.fromString(miUUIDString);
-		
-		System.out.println(miUUID);
-		System.out.println(miUUIDString);
-		System.out.println(otroUUID);
-	}
+//	public static void main(String[] args) {
+//		UUID miUUID = UUID.randomUUID();
+//		String miUUIDString = miUUID.toString();
+//		UUID otroUUID = UUID.fromString(miUUIDString);
+//		
+//		System.out.println(miUUID);
+//		System.out.println(miUUIDString);
+//		System.out.println(otroUUID);
+//	}
 
 	
 	

@@ -28,31 +28,31 @@ public class YearDomainBuilder {
 		return this;
 	}
 
-	private final UUID getId() {
-		return id;
-	}
-
-	private final int getYear() {
-		return year;
-	}
+//	codigo que sobra,y fue eliminado
+//	private final UUID getId() {
+//		return id;
+//	}
+//
+//	private final int getYear() {
+//		return year;
+//	}
 	
 	
 	//con este metodo se esta creando un yeardomain
 	public YearDomain build() {
-		return YearDomain.create(getId(), getYear()); 
+		return YearDomain.create(id, year); 
 	}
 	
-	public static void main(String[] args) {
-		//construir los domain el builder es el que se cargo con la logica de creacion
-		
-		
-		YearDomain myYear = YearDomainBuilder.get().setYear(2020).build();
-		YearDomain myYearTwo = YearDomainBuilder.get().setId(null).build();
-		
-		YearDomain myYearThree = YearDomainBuilder.get().setId(null).build();
-		YearDomain myYearFour = YearDomainBuilder.get().build();
-		YearDomain myYearFive = YearDomainBuilder.get().setYear(2020).setId(null).build();
-		
-	}
+//	public static void main(String[] args) {
+//		//construir los domain el builder es el que se cargo con la logica de creacion
+//		
+//		
+//		YearDomain myYear = YearDomainBuilder.get().setYear(2020).build();
+//		YearDomain myYearTwo = YearDomainBuilder.get().setId(null).build();
+//		YearDomain myYearThree = YearDomainBuilder.get().setId(null).build();
+//		YearDomain myYearFour = YearDomainBuilder.get().build();
+//		YearDomain myYearFive = YearDomainBuilder.get().setYear(2020).setId(null).build();
+//		
+//	}
 	
 }

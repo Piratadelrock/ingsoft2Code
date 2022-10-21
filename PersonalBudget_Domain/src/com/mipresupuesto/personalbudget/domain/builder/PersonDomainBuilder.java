@@ -11,6 +11,8 @@ public class PersonDomainBuilder {
 	private String idCard;
 	private String firstName;
 	private String middleName;
+	private String lastName;
+
 	private String firstSurname;
 	private String secondSurname;
 	
@@ -83,7 +85,9 @@ public class PersonDomainBuilder {
 	}
 	
 	public PersonDomain build() {
-		return PersonDomain.create(getId(), getIdCard(), getFirstName(), getMiddleName(), getFirstSurname());
+		return PersonDomain
+				.create(getId(), getIdCard(), getFirstName(), 
+						getMiddleName(), getFirstSurname(),getSecondSurname());
 	}
 	
 	

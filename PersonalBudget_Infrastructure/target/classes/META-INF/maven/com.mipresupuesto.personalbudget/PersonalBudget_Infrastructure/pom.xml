@@ -4,7 +4,11 @@
 	<artifactId>PersonalBudget_Infrastructure</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>PersonalBudget_Infrastructure</name>
-	<description>Componente que contiene los adaptadores o mecanismos de acceso a fuentes externas como base de datos servicios, web, archivos y otros.</description>
+	<description>
+		Componente que contiene los adaptadores o 
+		mecanismos de acceso a fuentes externas como 
+		base de datos servicios, web, archivos y otros para la aplicación Personal Budget.
+	</description>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -23,10 +27,15 @@
 			<artifactId>PersonalBudgetCrossCutting</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-				<dependency>
-  <groupId>com.mipresupuesto.personalbudget</groupId>
-  <artifactId>PersonalBudget_Entity</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+		<dependency>
+			<groupId>com.mipresupuesto.personalbudget</groupId>
+			<artifactId>PersonalBudget_Entity</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>11.2.1.jre18</version>
 		</dependency>
 	</dependencies>
 </project>
