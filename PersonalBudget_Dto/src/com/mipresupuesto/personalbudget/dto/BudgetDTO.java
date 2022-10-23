@@ -12,7 +12,7 @@ public class BudgetDTO {
 	public BudgetDTO(YearDTO year, PersonalDTO person) {
 		setYear(year);
 		setPerson(person);
-	}
+	 }
 
 
 	public BudgetDTO() {
@@ -26,7 +26,7 @@ public class BudgetDTO {
 	public final YearDTO getYear() {
 		
 		return year;
-	}
+	} 
 	public final void setYear(YearDTO year) {
 		this.year = year;
 	}

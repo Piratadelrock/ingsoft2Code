@@ -1,4 +1,4 @@
-package com.mipresupuesto.personalbudget.application.usecase.entityassambler;
+package com.mipresupuesto.personalbudget.application.entityassambler;
 
 public interface EntityAssembler<T, D>{
 	

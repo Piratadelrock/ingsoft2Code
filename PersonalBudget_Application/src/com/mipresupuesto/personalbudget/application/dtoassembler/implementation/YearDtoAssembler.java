@@ -1,6 +1,6 @@
-package com.mipresupuesto.personalbudget.application.service.dtoassembler.implementation;
+package com.mipresupuesto.personalbudget.application.dtoassembler.implementation;
 
-import com.mipresupuesto.personalbudget.application.service.dtoassembler.DTOAssembler;
+import com.mipresupuesto.personalbudget.application.dtoassembler.DTOAssembler;
 import com.mipresupuesto.personalbudget.crosscutting.utils.UtilUUID;
 import com.mipresupuesto.personalbudget.domain.YearDomain;
 import com.mipresupuesto.personalbudget.domain.builder.YearDomainBuilder;

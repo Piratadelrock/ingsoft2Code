@@ -1,6 +1,6 @@
-package com.mipresupuesto.personalbudget.application.usecase.implementation;
+package com.mipresupuesto.personalbudget.application.entityassembler.implementation;
 
-import com.mipresupuesto.personalbudget.application.usecase.entityassambler.EntityAssembler;
+import com.mipresupuesto.personalbudget.application.entityassambler.EntityAssembler;
 import com.mipresupuesto.personalbudget.domain.BudgetDomain;
 import com.mipresupuesto.personalbudget.entity.BudgetEntity;
 

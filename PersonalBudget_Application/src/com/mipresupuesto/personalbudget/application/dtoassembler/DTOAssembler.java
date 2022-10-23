@@ -1,4 +1,4 @@
-package com.mipresupuesto.personalbudget.application.service.dtoassembler;
+package com.mipresupuesto.personalbudget.application.dtoassembler;
 
 public interface DTOAssembler<T, D>{
 	

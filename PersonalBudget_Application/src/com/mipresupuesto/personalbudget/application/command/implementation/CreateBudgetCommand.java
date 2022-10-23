@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mipresupuesto.personalbudget.application.command.interfaces.CreateBudgetPort;
-import com.mipresupuesto.personalbudget.application.service.dtoassembler.DTOAssembler;
+import com.mipresupuesto.personalbudget.application.dtoassembler.DTOAssembler;
 import com.mipresupuesto.personalbudget.application.service.interfaces.CreateBudgetUseCase;
 import com.mipresupuesto.personalbudget.domain.BudgetDomain;
 import com.mipresupuesto.personalbudget.dto.BudgetDTO;
