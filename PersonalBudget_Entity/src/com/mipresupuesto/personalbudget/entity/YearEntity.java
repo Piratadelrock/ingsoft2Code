@@ -16,6 +16,7 @@ public class YearEntity {
 	@Id
 	@Column(name="id")
 	private UUID id;
+	
 	@Column(name = "year")
 	private int year;
 	

@@ -16,11 +16,20 @@ public class PersonEntity {
 	@Id
 	@Column(name="id")
 	private UUID id;
-	@Column(name="id")
+	
+	@Column(name="idCard")
 	private String idCard;
+	
+	@Column(name="firstName")
 	private String firstName;
+	
+	@Column(name="middleName")
 	private String middleName;
+	
+	@Column(name="firstSurname")
 	private String firstSurname;
+	
+	@Column(name="secondSurname")
 	private String secondSurname;
 	
 	public PersonEntity() {
