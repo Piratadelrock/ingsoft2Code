@@ -27,8 +27,15 @@ public class YearDomainBuilder {
 		this.year = year;
 		return this;
 	}
+	
 
-//	codigo que sobra,y fue eliminado
+	public YearDomain build() {
+		return YearDomain.create(id, year); 
+	}
+	
+	
+//  estos getters se pueden omitir, cambiando setId() por id
+//  se puede dejar directamente, para que sobren estos getters
 //	private final UUID getId() {
 //		return id;
 //	}
@@ -37,12 +44,8 @@ public class YearDomainBuilder {
 //		return year;
 //	}
 	
-	
-	//con este metodo se esta creando un yeardomain
-	public YearDomain build() {
-		return YearDomain.create(id, year); 
-	}
-	
+//	BLOQUE DE CODIGO NO VA EN ESTE OBJETO SOLO ES PARA USO DE METODO 
+//	ejemplos para la creacion del año 
 //	public static void main(String[] args) {
 //		//construir los domain el builder es el que se cargo con la logica de creacion
 //		

@@ -11,7 +11,7 @@ public class PersonDomainBuilder {
 	private String idCard;
 	private String firstName;
 	private String middleName;
-	private String lastName;
+//	private String lastName;
 
 	private String firstSurname;
 	private String secondSurname;

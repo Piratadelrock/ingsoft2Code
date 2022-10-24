@@ -1,6 +1,6 @@
 package com.mipresupuesto.personalbudget.dto;
 
-public class YearDTO {
+public final class YearDTO {
 
 	private String id;
 	private int year;
@@ -22,21 +22,27 @@ public class YearDTO {
 	}
 	
 	public final String getId() {
+		
 		if (id == null || "".equals(id.trim())) {
 			setId("");
 		}
 		return id;
 	}
 	public final int getYear() {
+//		se puede dejar o no pero se quita porque normalmente no es necesario revisar cabezas 
+//		if (year<0) {
+//			setYear(0);
+//		}
 		return year;
 	}
 	public final void setId(String id) {
-		if (year<0) {
-			setYear(0);
+		if (id == null) {
+			setId("");
 		}
 		this.id = id;
 	}
 	public final void setYear(int year) {
+		
 		this.year = year;
 	}
 	

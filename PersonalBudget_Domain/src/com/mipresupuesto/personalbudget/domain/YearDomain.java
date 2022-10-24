@@ -2,7 +2,7 @@ package com.mipresupuesto.personalbudget.domain;
 
 import java.util.UUID;
 
-public class YearDomain {
+public final class YearDomain {
 	
 	private  UUID id;
 	private  int year;
@@ -16,14 +16,6 @@ public class YearDomain {
 		return new YearDomain(id,year);
 	}
 
-	public final UUID getId() {
-		return id;
-	}
-
-	public final int getYear() {
-		return year;
-	}
-
 	private final void setId(final UUID id) {
 		this.id = (id == null) ? UUID.randomUUID(): id;
 		
@@ -32,6 +24,15 @@ public class YearDomain {
 	private final void setYear(int year) {
 		this.year = year;
 	}
+	public final UUID getId() {
+		return id;
+	}
+
+	public final int getYear() {
+		return year;
+	}
+
+
 	
 //	public static void main(String[] args) {
 //		UUID miUUID = UUID.randomUUID();

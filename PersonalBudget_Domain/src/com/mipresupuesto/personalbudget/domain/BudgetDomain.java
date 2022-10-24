@@ -7,7 +7,7 @@ import com.mipresupuesto.personalbudget.domain.builder.PersonDomainBuilder;
 import com.mipresupuesto.personalbudget.domain.builder.YearDomainBuilder;
 
 
-public class BudgetDomain {
+public final class BudgetDomain {
 
 	private UUID id;
 	private YearDomain year;
@@ -24,9 +24,6 @@ public class BudgetDomain {
 		return new BudgetDomain(id, year, person);
 	}
 	
-
-
-
 	private final void setYear(final YearDomain year) {
 		this.year = (year == null) ? YearDomainBuilder.get().build() : year;
 	}																																																																																																																										
