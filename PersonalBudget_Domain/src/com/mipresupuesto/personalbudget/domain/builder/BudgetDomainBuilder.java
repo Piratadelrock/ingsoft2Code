@@ -7,7 +7,7 @@ import com.mipresupuesto.personalbudget.domain.BudgetDomain;
 import com.mipresupuesto.personalbudget.domain.PersonDomain;
 import com.mipresupuesto.personalbudget.domain.YearDomain;
 
-public class BudgetDomainBuilder {
+public final class BudgetDomainBuilder {
 	
 	private UUID id;
 	private YearDomain year;
@@ -24,14 +24,20 @@ public class BudgetDomainBuilder {
 	public static final BudgetDomainBuilder get() {
 		return new BudgetDomainBuilder();
 	}
+	
+	
+	public final BudgetDomainBuilder setId(final UUID id) {
+		this.id = (id == null) ? UtilUUID.DEFAULT_UUID: id;
+		return this;
+	}
 
-	public final BudgetDomainBuilder setYear(YearDomain year) {
+	public final BudgetDomainBuilder setYear(final YearDomain year) {
 		this.year = (year == null) ? YearDomainBuilder.get().build(): year;
 		return this;
 	}
 
 
-	public final BudgetDomainBuilder setPerson(PersonDomain person) {
+	public final BudgetDomainBuilder setPerson(final PersonDomain person) {
 		this.person = person;
 		return this;
 	}
@@ -46,6 +52,11 @@ public class BudgetDomainBuilder {
 		return person;
 	}
 	
+	public final UUID getId() {
+		
+		return id;
+	}
+
 
 	
 	public BudgetDomain build() {
@@ -53,15 +64,8 @@ public class BudgetDomainBuilder {
 	
 	}
 
-	public final UUID getId() {
-		
-		return id;
-	}
 
-	public final BudgetDomainBuilder setId(final UUID id) {
-		this.id = (id == null) ? UtilUUID.DEFAULT_UUID: id;
-		return this;
-	}
+
 	
 	
 	

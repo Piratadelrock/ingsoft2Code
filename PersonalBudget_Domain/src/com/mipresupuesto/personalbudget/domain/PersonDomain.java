@@ -12,8 +12,13 @@ public final class PersonDomain {
 	private String firstSureName;
 	private String secondSureName;
 
-	private PersonDomain(final UUID id, final String idCard, final String firstName, final String middleName,
-			final String firstSureName, final String secondSureName) {
+	private PersonDomain(
+			final UUID id, 
+			final String idCard, 
+			final String firstName, 
+			final String middleName,
+			final String firstSureName, 
+			final String secondSureName) {
 		setId(id);
 		setIdCard(idCard);
 		setFirstName(firstName);
@@ -29,31 +34,31 @@ public final class PersonDomain {
 
 	}
 
-	private final void setId(UUID id) {
+	private final void setId(final UUID id) {
 
 		this.id = (id == null) ? UUID.randomUUID() : id;
 
 	}
 
-	private final void setIdCard(String idCard) {
+	private final void setIdCard(final String idCard) {
 //		this.idCard = idCard;
 //		this.idCard = (idCard == null) ? PersonDomainBuilder.get(): idCard;
 		this.idCard = (idCard == null) ? "" : idCard;
 	}
 
-	private final void setFirstName(String firstName) {
+	private final void setFirstName(final String firstName) {
 		this.firstName = firstName;
 	}
 
-	private final void setMiddleName(String middleName) {
+	private final void setMiddleName(final String middleName) {
 		this.middleName = middleName;
 	}
 
-	private void setFirstSureName(String firstSureName) {
+	private void setFirstSureName(final String firstSureName) {
 		this.firstSureName = firstSureName;
 	}
 
-	private void setSecondSureName(String secondSureName) {
+	private void setSecondSureName(final String secondSureName) {
 		this.secondSureName = secondSureName;
 	}
 
@@ -81,12 +86,13 @@ public final class PersonDomain {
 	public final String getSecondSureName() {
 		return secondSureName;
 	}
-	public final String getLastName() {
-		return (getFirstSureName() + " " + getSecondSureName()).trim();
-	}
 	public final String getName() {
 		return (getFirstName() + " " + getMiddleName()).trim();
 	}
+	public final String getLastName() {
+		return (getFirstSureName() + " " + getSecondSureName()).trim();
+	}
+
 	public final String getCompleteName() {
 		return (getName() + " " + getLastName()).trim();
 	}

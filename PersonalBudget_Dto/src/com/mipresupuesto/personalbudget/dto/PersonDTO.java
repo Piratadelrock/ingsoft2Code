@@ -6,10 +6,10 @@ public final class PersonDTO {
 	private String idCard;
 	private String firstName;
 	private String middleName;
-	private String firstsurname;
+	private String firstSurname;
 	private String secondSurname;
 
-	
+//	el dominio recibe el resto pero no recibe ninguno de los siguientes 
 	private String Name;
 	private String lastName;
 	private String completeName;
@@ -19,9 +19,9 @@ public final class PersonDTO {
 		setIdCard("");
 		setFirstName("");
 		setMiddleName("");
-		
 		setFirstsurname("");
 		setSecondSurname("");
+		
 		setName("");
 		setLastName("");
 		setCompleteName("");
@@ -29,7 +29,7 @@ public final class PersonDTO {
 	}
 	
 //	@SuppressWarnings("unchecked") 
-	@SuppressWarnings("all")
+@SuppressWarnings("all")
 	public PersonDTO(
 			final String id,
 			final String idCard, 
@@ -37,46 +37,50 @@ public final class PersonDTO {
 			final String middleName, 
 			final String firstsurname,
 			final String secondSurname,
+			
 			final String Name,
 			final String lastName,
 			final String completeName
 			
 			) {
 		
-		setId("");
-		setIdCard("");
-		setFirstName("");
-		setMiddleName("");
-		setLastName("");
+		setId(id);
+		setIdCard(idCard);
+		setFirstName(firstName);
+		setMiddleName(middleName);
+		setFirstsurname(firstsurname);
+		setSecondSurname(secondSurname);
+		
+		setName(Name);
+		setLastName(lastName);
+		setCompleteName(completeName);
 	
 	}
+	
 	public static final PersonDTO create() {
 		return new PersonDTO();
 	}
 	
-
-
-	
 	public final String getId() {
-		if (id == null || "".equals(id.trim())) {
+		if (id == null) {
 			setId("");
 		}
-		return id;
+		return id.trim();
 	}
 	public final void setId(final String id) {
 		this.id = id;
 	}
 	public final String getIdCard() {
-		if (idCard == null || "".equals(idCard.trim())) {
+		if (idCard == null) {
 			setIdCard("");
 		}
-		return idCard;
+		return idCard.trim();
 	}
 	public final void setIdCard(final String idCard) {
 		this.idCard = idCard;
 	}
 	public final String getFirstName() {
-		if (firstName == null || "".equals(firstName.trim())) {
+		if (firstName == null ) {
 			setFirstName("");
 		}
 		return firstName;
@@ -85,19 +89,19 @@ public final class PersonDTO {
 		this.firstName = firstName;
 	}
 	public final String getMiddleName() {
-		if (middleName == null || "".equals(middleName.trim())) {
+		if (middleName == null ) {
 			setMiddleName("");
 		}
-		return middleName;
+		return middleName.trim();
 	}
 	public final void setMiddleName(final String middleName) {
 		this.middleName = middleName;
 	}
 	public final String getLastName() {
-		if (lastName == null || "".equals(lastName.trim())) {
+		if (lastName == null ) {
 			setLastName("");
 		}
-		return lastName;
+		return lastName.trim();
 	}
 	public final void setLastName(final String lastName) {
 		this.lastName = lastName;
@@ -105,21 +109,21 @@ public final class PersonDTO {
 	
 	
 	public final String getFirstsurname() {
-		if (firstsurname == null || "".equals(firstsurname.trim())) {
+		if (firstSurname == null) {
 			setFirstsurname("");
 		}
-		return firstsurname;
+		return firstSurname.trim();
 	}
 
 	public final void setFirstsurname(final String firstsurname) {
-		this.firstsurname = firstsurname;
+		this.firstSurname = firstsurname;
 	}
 
 	public final String getSecondSurname() {
-		if (secondSurname == null || "".equals(secondSurname.trim())) {
+		if (secondSurname == null ) {
 			setSecondSurname("");
 		}
-		return secondSurname;
+		return secondSurname.trim();
 	}
 
 	public final void setSecondSurname(final String secondSurname) {
@@ -127,24 +131,24 @@ public final class PersonDTO {
 	}
 
 	public final String getName() {
-		if (Name == null || "".equals(Name.trim())) {
+		if (Name == null) {
 			setName("");
 		}
-		return Name;
+		return Name.trim();
 	}
 
-	public final void setName(String name) {
+	public final void setName(final String name) {
 		Name = name;
 	}
 
 	public final String getCompleteName() {
-		if (completeName == null || "".equals(completeName.trim())) {
+		if (completeName == null ) {
 			setCompleteName("");
 		}
-		return completeName;
+		return completeName.trim();
 	}
 
-	public final void setCompleteName(String completeName) {
+	public final void setCompleteName(final String completeName) {
 		this.completeName = completeName;
 	}
 

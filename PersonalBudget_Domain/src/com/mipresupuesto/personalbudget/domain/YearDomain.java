@@ -7,12 +7,12 @@ public final class YearDomain {
 	private  UUID id;
 	private  int year;
 	
-	private YearDomain(final UUID id, int year) {
+	private YearDomain(final UUID id, final int year) {
 		setId(id);
 		setYear(year);
 	}
 
-	public static YearDomain create(final UUID id, int year) {
+	public static YearDomain create(final UUID id, final int year) {
 		return new YearDomain(id,year);
 	}
 
@@ -21,9 +21,10 @@ public final class YearDomain {
 		
 	}
 
-	private final void setYear(int year) {
+	private final void setYear(final int year) {
 		this.year = year;
 	}
+	
 	public final UUID getId() {
 		return id;
 	}
@@ -33,14 +34,14 @@ public final class YearDomain {
 	}
 
 
-	
+// se ejecuta desde esta pestaña 	
 //	public static void main(String[] args) {
 //		UUID miUUID = UUID.randomUUID();
 //		String miUUIDString = miUUID.toString();
 //		UUID otroUUID = UUID.fromString(miUUIDString);
 //		
 //		System.out.println(miUUID);
-//		System.out.println(miUUIDString);
+//		System.out.println(miUUIDString.replace("0","z");
 //		System.out.println(otroUUID);
 //	}
 

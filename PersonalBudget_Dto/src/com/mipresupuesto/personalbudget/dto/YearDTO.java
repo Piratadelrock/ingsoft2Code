@@ -29,20 +29,21 @@ public final class YearDTO {
 		return id;
 	}
 	public final int getYear() {
-//		se puede dejar o no pero se quita porque normalmente no es necesario revisar cabezas 
-//		if (year<0) {
-//			setYear(0);
-//		}
+//		por ser un dato primitivo probablemente nunca lleguen nullos, por ser primitivo siempre tendra un valor cualquiera
+//		es decir que se puede o no dejar, pero se busca que el programa quede lo mas limpio posible 
+		if (year<0) {
+			setYear(0);
+		}
 		return year;
 	}
-	public final void setId(String id) {
-		if (id == null) {
-			setId("");
-		}
+	public final void setId(final String id) {
+//		if (id == null) {
+//			setId("");
+//		}
 		this.id = id;
 	}
-	public final void setYear(int year) {
-		
+	
+	public final void setYear(final int year) {
 		this.year = year;
 	}
 	

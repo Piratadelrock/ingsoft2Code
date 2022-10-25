@@ -14,7 +14,7 @@ public final class BudgetDomain {
 	private PersonDomain person;
 	
 	
-	private BudgetDomain(final UUID id, YearDomain year, final PersonDomain person) {
+	private BudgetDomain(final UUID id, final YearDomain year, final PersonDomain person) {
 		setId(id);
 		setYear(year);
 		setPerson(person);
@@ -43,7 +43,7 @@ public final class BudgetDomain {
 	public final UUID getId() {
 		return id;
 	}
-	private final void setId(UUID id) {
+	private final void setId(final UUID id) {
 		this.id = (id == null) ? UtilUUID.DEFAULT_UUID: id;		
 	}
 	
