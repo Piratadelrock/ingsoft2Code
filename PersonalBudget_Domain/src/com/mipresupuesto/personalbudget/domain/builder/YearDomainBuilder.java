@@ -4,7 +4,8 @@ import java.util.UUID;
 
 import com.mipresupuesto.personalbudget.domain.YearDomain;
 
-public class YearDomainBuilder {
+public final class YearDomainBuilder {
+	
 	private UUID id; 
 	private int year;
 	
@@ -18,12 +19,12 @@ public class YearDomainBuilder {
 		return new YearDomainBuilder();
 	}
 
-	public final YearDomainBuilder setId(UUID id) {
+	public final YearDomainBuilder setId(final UUID id) {
 		this.id = (id == null) ? UUID.randomUUID(): id;
 		return this;
 	}
 
-	public final YearDomainBuilder setYear(int year) {
+	public final YearDomainBuilder setYear(final int year) {
 		this.year = year;
 		return this;
 	}

@@ -5,7 +5,7 @@ import java.util.UUID;
 import com.mipresupuesto.personalbudget.crosscutting.utils.UtilUUID;
 import com.mipresupuesto.personalbudget.domain.PersonDomain;
 
-public class PersonDomainBuilder {
+public final class PersonDomainBuilder {
 	
 	private UUID id;
 	private String idCard;
@@ -50,32 +50,32 @@ public class PersonDomainBuilder {
 		return secondSurname;
 	}
 
-	public final PersonDomainBuilder setId(UUID id) {
+	public final PersonDomainBuilder setId(final UUID id) {
 		this.id = (id == null) ? UtilUUID.DEFAULT_UUID: id;
 		return this;
 	}
 
-	public final PersonDomainBuilder setIdCard(String idCard) {
+	public final PersonDomainBuilder setIdCard(final String idCard) {
 		this.idCard = (idCard == null) ? "" : idCard.trim();
 		return this;
 	}
 
-	public final PersonDomainBuilder setFirstName(String firstName) {
+	public final PersonDomainBuilder setFirstName(final String firstName) {
 		this.firstName = (firstName == null) ? "" : firstName.trim();
 		return this;
 	}
 
-	public final PersonDomainBuilder setMiddleName(String middleName) {
+	public final PersonDomainBuilder setMiddleName(final String middleName) {
 		this.middleName = (middleName == null) ? "" : middleName.trim();
 		return this;
 	}
 
-	public final PersonDomainBuilder setFirstSurname(String firstSurname) {
+	public final PersonDomainBuilder setFirstSurname(final String firstSurname) {
 		this.firstSurname = (firstSurname == null) ? "" : firstSurname.trim();
 		return this;
 	}
 
-	public final PersonDomainBuilder setSecondSurname(String secondSurname) {
+	public final PersonDomainBuilder setSecondSurname(final String secondSurname) {
 		this.secondSurname = (secondSurname == null) ? "" : secondSurname.trim();
 		return this;
 	}

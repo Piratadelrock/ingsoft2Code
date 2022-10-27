@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mipresupuesto.personalbudget.application.command.interfaces.CreateBudgetPort;
 import com.mipresupuesto.personalbudget.dto.BudgetDTO;
 
+
 @RestController
 @RequestMapping("api/v1/budget")
 public class BudgetController {

@@ -1,8 +1,8 @@
 package com.mipresupuesto.personalbudget.application.entityassambler;
 
-public interface EntityAssembler<T, D>{
+public interface EntityAssembler<E, D>{
 	
-	D assembleDomain(T entity);
+	D assembleDomain(E entity);
 	
-	T assembleEntity(D domain);
+	E assembleEntity(D domain);
 }

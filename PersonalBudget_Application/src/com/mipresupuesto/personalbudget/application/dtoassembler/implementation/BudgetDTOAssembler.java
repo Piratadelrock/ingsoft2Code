@@ -4,7 +4,7 @@ import com.mipresupuesto.personalbudget.application.dtoassembler.DTOAssembler;
 import com.mipresupuesto.personalbudget.domain.BudgetDomain;
 import com.mipresupuesto.personalbudget.dto.BudgetDTO;
 
-public class BudgetDTOAssembler implements DTOAssembler<BudgetDTO, BudgetDomain>{
+public final class BudgetDTOAssembler implements DTOAssembler<BudgetDTO, BudgetDomain>{
 
 	@Override
 	public BudgetDomain assembleDomain(BudgetDTO dto) {

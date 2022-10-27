@@ -6,7 +6,7 @@ import com.mipresupuesto.personalbudget.domain.YearDomain;
 import com.mipresupuesto.personalbudget.domain.builder.YearDomainBuilder;
 import com.mipresupuesto.personalbudget.dto.YearDTO;
 
-public class YearDtoAssembler implements DTOAssembler<YearDTO, YearDomain> {
+public final class YearDTOAssembler implements DTOAssembler<YearDTO, YearDomain> {
 	
 	
 

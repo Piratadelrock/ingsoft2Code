@@ -23,7 +23,7 @@ public final class YearDTO {
 	
 	public final String getId() {
 		
-		if (id == null || "".equals(id.trim())) {
+		if (id == null ) {
 			setId("");
 		}
 		return id;

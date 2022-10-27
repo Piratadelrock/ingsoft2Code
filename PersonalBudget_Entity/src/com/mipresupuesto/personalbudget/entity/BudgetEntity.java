@@ -26,7 +26,7 @@ public final class BudgetEntity {
 	private PersonEntity person;
 
 	public BudgetEntity() {
-
+		setId(UtilUUID.DEFAULT_UUID);
 		setYear(new YearEntity());
 		setPerson(new PersonEntity());
 
