@@ -20,6 +20,10 @@ public class Message {
 		return new Message(text, title, level);
 	}
 	
+	public static Message createMessage(final String text, final MessageLevel level)  {
+		return new Message(text, text, level);
+	}
+	
 	
 	public static Message createFatalMessage(final String text)  {
 		return new Message(text, text, MessageLevel.FATAL);
@@ -36,7 +40,7 @@ public class Message {
 		return new Message(text, text, MessageLevel.INFORMATION);
 	}
 	public static Message createSuccesMessage(final String text, final String title)  {
-		return new Message(text, title, MessageLevel.SUCCESS);
+		return new Message(text, text, MessageLevel.SUCCESS);
 	}
 	
 	public final String getText() {
