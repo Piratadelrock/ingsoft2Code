@@ -12,11 +12,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>PersonalBudget_Api</name>
 	<description>Componente que permite exponer los diferentes mecanismos de acceso a la aplicacion Personal Budget</description>
+	
 	<properties>
 		<java.version>19</java.version>
 		<sonar.organization>piratadelrock</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

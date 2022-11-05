@@ -1,4 +1,4 @@
-package com.mipresupuesto.personalbudget.infrastructure.repository;
+package com.mipresupuesto.personalbudget.application.usecase.specification;
 
 
 public class AndSpecification<T> extends CompositeSpecification<T> {

@@ -9,8 +9,8 @@ public class Message {
 	private MessageLevel level;
 	
 	
-	public Message(String text, String title, MessageLevel level) {
-		super();
+	private Message(final String text, final String title, final MessageLevel level) {
+		
 		setText(text);
 		setTitle(title);
 		setLevel(level);
@@ -43,6 +43,7 @@ public class Message {
 		return new Message(text, text, MessageLevel.SUCCESS);
 	}
 	
+		
 	public final String getText() {
 		return text;
 	}
@@ -52,13 +53,14 @@ public class Message {
 	public final MessageLevel getLevel() {
 		return level;
 	}
+	
 	private final void setText(final String text) {
 		
-		if(title == null || "".intern() == title.intern().trim()) {
-			this.title = "";
+		if(text == null || "".intern() == text.intern().trim()) {
+			this.text = "";
 		}
 		else {
-			this.title = title.trim();
+			this.text = text.trim();
 		}
 	}
 	private final void setTitle(final String title) {

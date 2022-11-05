@@ -1,4 +1,4 @@
-package com.mipresupuesto.personalbudget.infrastructure.repository;
+package com.mipresupuesto.personalbudget.application.usecase.specification;
 
 public class OrSpecification<T> extends CompositeSpecification<T> implements Specification<T>{
 
