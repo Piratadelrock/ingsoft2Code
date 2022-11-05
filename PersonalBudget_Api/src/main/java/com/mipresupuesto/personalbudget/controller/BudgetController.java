@@ -45,27 +45,33 @@ public class BudgetController {
 		
 	}
 	
-	@GetMapping("/saludo")
-	public ResponseEntity<Response<BudgetDTO>> saludar(@RequestBody BudgetDTO budget) {
+//	@GetMapping("/saludoResponse")
+//	public ResponseEntity<Response<BudgetDTO>> saludar(@RequestBody BudgetDTO budget) {
 		
-		ResponseEntity<Response<BudgetDTO>> responseEntity;
-		Response<BudgetDTO> response = new Response<>();
-		HttpStatus statusCode = HttpStatus.OK;
-		
-				
-		try {
-			createBudgetPort.execute(budget);
-			
-			response.addMessage(Message.createSuccesMessage("El budget se ha creado de forma satisfactoria"));
-		} catch (final Exception excepcion) {
-			statusCode = HttpStatus.BAD_REQUEST;
-			//si excepcion tiene mensaje de usuario, agrego el mensaje de usuario, sino, agrego un mensaje generico
-			response.addMessage(Message.createErrorMessage("Ha ocurrido un problema inesperado tratando de crear el presupuesto deseado..."));
-		}
-		
-		createBudgetPort.execute(budget);
-		return new ResponseEntity<>(response,statusCode);
+//		ResponseEntity<Response<BudgetDTO>> responseEntity;
+//		Response<BudgetDTO> response = new Response<>();
+//		HttpStatus statusCode = HttpStatus.OK;
+//		
+//				
+//		try {
+//			createBudgetPort.execute(budget);
+//			
+//			response.addMessage(Message.createSuccesMessage("El budget se ha creado de forma satisfactoria"));
+//		} catch (final Exception excepcion) {
+//			statusCode = HttpStatus.BAD_REQUEST;
+//			//si excepcion tiene mensaje de usuario, agrego el mensaje de usuario, sino, agrego un mensaje generico
+//			response.addMessage(Message.createErrorMessage("Ha ocurrido un problema inesperado tratando de crear el presupuesto deseado..."));
+//		}
+//		
+//		createBudgetPort.execute(budget);
+//		return new ResponseEntity<>(response,statusCode);
 
+//	}
+	
+	@GetMapping("/saludo")
+	public String saludar(){
+		
+		return "Hola mundo!!";
 	}
 }
 

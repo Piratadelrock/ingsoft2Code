@@ -39,7 +39,7 @@ public class Message {
 	public static Message createInformationMessage(final String text)  {
 		return new Message(text, text, MessageLevel.INFORMATION);
 	}
-	public static Message createSuccesMessage(final String text, final String title)  {
+	public static Message createSuccesMessage(final String text)  {
 		return new Message(text, text, MessageLevel.SUCCESS);
 	}
 	
