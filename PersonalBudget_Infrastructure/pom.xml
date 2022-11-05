@@ -22,9 +22,10 @@
 		</plugins>
 	</build>
 	<properties>
-  <sonar.organization>piratadelrock</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-</properties>
+		<sonar.organization>piratadelrock</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>PersonalBudgetCrossCutting</groupId>
