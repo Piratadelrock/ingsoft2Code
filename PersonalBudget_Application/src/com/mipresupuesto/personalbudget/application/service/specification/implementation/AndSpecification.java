@@ -1,5 +1,6 @@
-package com.mipresupuesto.personalbudget.application.usecase.specification;
+package com.mipresupuesto.personalbudget.application.service.specification.implementation;
 
+import com.mipresupuesto.personalbudget.application.service.specification.interfaces.Specification;
 
 public class AndSpecification<T> extends CompositeSpecification<T> {
 

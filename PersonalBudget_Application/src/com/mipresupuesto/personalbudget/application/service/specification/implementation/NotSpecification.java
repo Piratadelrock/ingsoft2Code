@@ -1,4 +1,6 @@
-package com.mipresupuesto.personalbudget.application.usecase.specification;
+package com.mipresupuesto.personalbudget.application.service.specification.implementation;
+
+import com.mipresupuesto.personalbudget.application.service.specification.interfaces.Specification;
 
 public class NotSpecification<T> extends CompositeSpecification<T> {
 

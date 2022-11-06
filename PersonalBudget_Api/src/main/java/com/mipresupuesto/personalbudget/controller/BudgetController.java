@@ -31,7 +31,9 @@ public class BudgetController {
 		
 				
 		try {
+			
 			createBudgetPort.execute(budget);
+			
 			response.addMessage(Message
 					.createSuccesMessage("El budget se ha creado de forma satisfactoria"));
 			
@@ -50,6 +52,8 @@ public class BudgetController {
 		
 	}
 	
+	
+//	para mostrar la implementacion del codigo creado arriba sin la creacion de la app
 	@GetMapping
 	public ResponseEntity<Response<BudgetDTO>> saludar() {
 		

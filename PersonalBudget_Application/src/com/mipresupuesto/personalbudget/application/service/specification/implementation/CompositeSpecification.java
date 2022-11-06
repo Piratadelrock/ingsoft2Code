@@ -1,6 +1,9 @@
-package com.mipresupuesto.personalbudget.application.usecase.specification;
+package com.mipresupuesto.personalbudget.application.service.specification.implementation;
+
+import com.mipresupuesto.personalbudget.application.service.specification.interfaces.Specification;
 
 public abstract class CompositeSpecification<T> implements Specification<T> {
+	
     public CompositeSpecification<T> or(Specification<T> specification) {
         return new OrSpecification<>(this, specification);
     }
@@ -10,6 +13,8 @@ public abstract class CompositeSpecification<T> implements Specification<T> {
     }
 
     public CompositeSpecification<T> not() {
-        return new NotSpecification<T>(this);
+    	return new NotSpecification<T>(this);
     }
+    
+    
 }

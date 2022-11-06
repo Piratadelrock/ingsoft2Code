@@ -89,8 +89,5 @@ public final class PersonDomainBuilder {
 				.create(getId(), getIdCard(), getFirstName(), 
 						getMiddleName(), getFirstSurname(),getSecondSurname());
 	}
-	
-	
-	
-	
+
 }
