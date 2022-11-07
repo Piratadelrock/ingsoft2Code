@@ -3,3 +3,6 @@ package com.mipresupuesto.personalbudget.application.service.specification.inter
 public interface Specification<T> {
     boolean isSatisfiedBy(T t);
 }
+
+
+

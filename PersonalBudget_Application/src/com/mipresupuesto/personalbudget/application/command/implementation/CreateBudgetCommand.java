@@ -17,7 +17,7 @@ public class CreateBudgetCommand implements CreateBudgetPort{
 	
 	@Autowired
 	private CreateBudgetUseCase useCase;
-//	tambien poria ser un "adapter"
+
 	
 	@Override
 	public void execute(BudgetDTO budget) {

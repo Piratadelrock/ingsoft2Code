@@ -23,7 +23,7 @@ public final class PersonDTO {
 		setSecondSurname("");
 		
 		setName("");
-		setLastName("");
+//		setLastName("");
 		setCompleteName("");
 		
 	}
@@ -39,7 +39,7 @@ public final class PersonDTO {
 			final String secondSurname,
 			
 			final String Name,
-			final String lastName,
+//			final String lastName,
 			final String completeName
 			
 			) {
@@ -52,7 +52,7 @@ public final class PersonDTO {
 		setSecondSurname(secondSurname);
 		
 		setName(Name);
-		setLastName(lastName);
+//		setLastName(lastName);
 		setCompleteName(completeName);
 	
 	}
@@ -97,15 +97,15 @@ public final class PersonDTO {
 	public final void setMiddleName(final String middleName) {
 		this.middleName = middleName;
 	}
-	public final String getLastName() {
-		if (lastName == null ) {
-			setLastName("");
-		}
-		return lastName.trim();
-	}
-	public final void setLastName(final String lastName) {
-		this.lastName = lastName;
-	}
+//	public final String getLastName() {
+//		if (lastName == null ) {
+//			setLastName("");
+//		}
+//		return lastName.trim();
+//	}
+//	public final void setLastName(final String lastName) {
+//		this.lastName = lastName;
+//	}
 	
 	
 	public final String getFirstsurname() {
