@@ -25,35 +25,56 @@ public final class PersonEntity {
 
 	@Column(name = "middleName")
 	private String middleName;
-
-	@Column(name = "firstSurname")
+	
+	@Column(name = "lastName")
+	private String lastName;
+	
+//	@Column(name = "firstSurname")
 	private String firstSurname;
 
-	@Column(name = "secondSurname")
+//	@Column(name = "secondSurname")
 	private String secondSurname;
 
 	public PersonEntity() {
 
 		setId(UtilUUID.DEFAULT_UUID);
-
 		setIdCard("");
 		setFirstName("");
 		setMiddleName("");
+		setLastName("");
 		setFirstSurname("");
 		setSecondSurname("");
 
 	}
 
-	public PersonEntity(final UUID id, final String idCard, final String firstName, final String middleName,
-			final String firstSurname, final String secondSurname) {
+	public PersonEntity(
+			final UUID id, 
+			final String idCard, 
+			final String firstName, 
+			final String middleName,
+			final String lastName,
+			final String firstSurname, 
+			final String secondSurname) {
 		
 		setId(id);
 		setIdCard(idCard);
 		setFirstName(firstName);
 		setMiddleName(middleName);
+		setLastName(lastName);
 		setFirstSurname(firstSurname);
 		setSecondSurname(secondSurname);
 
+	}
+
+	public final String getLastName() {
+		if (lastName == null) {
+			setLastName("");
+		}
+		return lastName;
+	}
+
+	private final void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public final UUID getId() {

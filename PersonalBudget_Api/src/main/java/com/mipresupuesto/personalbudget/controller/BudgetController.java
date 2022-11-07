@@ -36,14 +36,17 @@ public class BudgetController {
 		try {
 
 			createBudgetPort.execute(budget);
+			
 			response.addMessage(Message.createSuccesMessage("El budget se ha creado de forma satisfactoria"));
 			log.info("El budget se creo de forma satisfactoria", response);
 
 		} catch (final Exception exception) {
-			statusCode = HttpStatus.BAD_REQUEST;
 
+			statusCode = HttpStatus.BAD_REQUEST;
+			
 			response.addMessage(Message.createErrorMessage(
 					"Ha ocurrido un problema inesperado tratando de crear el presupuesto deseado..."));
+			
 			log.error("Ha ocurrido un problema inesperado tratando de crear el presupesto deseado...", exception);
 
 		}

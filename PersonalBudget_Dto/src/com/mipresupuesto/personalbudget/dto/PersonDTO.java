@@ -13,101 +13,110 @@ public final class PersonDTO {
 	private String Name;
 	private String lastName;
 	private String completeName;
-	
+
 	private PersonDTO() {
 		setId("");
 		setIdCard("");
 		setFirstName("");
 		setMiddleName("");
-		setFirstsurname("");
-		setSecondSurname("");
+		setLastName("");
 		
-		setName("");
-//		setLastName("");
-		setCompleteName("");
-		
+//		setFirstsurname("");
+//		setSecondSurname("");
+//
+//		setName("");
+//		
+//		setCompleteName("");
+
 	}
-	
+
 //	@SuppressWarnings("unchecked") 
-@SuppressWarnings("all")
+	@SuppressWarnings("all")
 	public PersonDTO(
-			final String id,
+			final String id, 
 			final String idCard, 
 			final String firstName, 
-			final String middleName, 
-			final String firstsurname,
-			final String secondSurname,
-			
-			final String Name,
-//			final String lastName,
-			final String completeName
-			
+			final String middleName,
+//			final String firstsurname, 
+//			final String secondSurname,
+//			final String Name, 
+			final String lastName
+//			final String completeName
 			) {
-		
+
 		setId(id);
 		setIdCard(idCard);
 		setFirstName(firstName);
 		setMiddleName(middleName);
-		setFirstsurname(firstsurname);
-		setSecondSurname(secondSurname);
-		
-		setName(Name);
-//		setLastName(lastName);
-		setCompleteName(completeName);
-	
+//		setFirstsurname(firstsurname);
+//		setSecondSurname(secondSurname);
+//
+//		setName(Name);
+		setLastName(lastName);
+//		setCompleteName(completeName);
+
 	}
-	
+
+
+
+
 	public static final PersonDTO create() {
 		return new PersonDTO();
 	}
-	
+
 	public final String getId() {
 		if (id == null) {
 			setId("");
 		}
 		return id.trim();
 	}
+
 	public final void setId(final String id) {
 		this.id = id;
 	}
+
 	public final String getIdCard() {
 		if (idCard == null) {
 			setIdCard("");
 		}
 		return idCard.trim();
 	}
+
 	public final void setIdCard(final String idCard) {
 		this.idCard = idCard;
 	}
+
 	public final String getFirstName() {
-		if (firstName == null ) {
+		if (firstName == null) {
 			setFirstName("");
 		}
 		return firstName;
 	}
+
 	public final void setFirstName(final String firstName) {
 		this.firstName = firstName;
 	}
+
 	public final String getMiddleName() {
-		if (middleName == null ) {
+		if (middleName == null) {
 			setMiddleName("");
 		}
 		return middleName.trim();
 	}
+
 	public final void setMiddleName(final String middleName) {
 		this.middleName = middleName;
 	}
-//	public final String getLastName() {
-//		if (lastName == null ) {
-//			setLastName("");
-//		}
-//		return lastName.trim();
-//	}
-//	public final void setLastName(final String lastName) {
-//		this.lastName = lastName;
-//	}
-	
-	
+	public final String getLastName() {
+		if (lastName == null ) {
+			setLastName("");
+		}
+		return lastName.trim();
+	}
+	public final void setLastName(final String lastName) {
+		this.lastName = lastName;
+	}
+
 	public final String getFirstsurname() {
 		if (firstSurname == null) {
 			setFirstsurname("");
@@ -120,7 +129,7 @@ public final class PersonDTO {
 	}
 
 	public final String getSecondSurname() {
-		if (secondSurname == null ) {
+		if (secondSurname == null) {
 			setSecondSurname("");
 		}
 		return secondSurname.trim();
@@ -142,7 +151,7 @@ public final class PersonDTO {
 	}
 
 	public final String getCompleteName() {
-		if (completeName == null ) {
+		if (completeName == null) {
 			setCompleteName("");
 		}
 		return completeName.trim();
@@ -152,5 +161,4 @@ public final class PersonDTO {
 		this.completeName = completeName;
 	}
 
-	
 }

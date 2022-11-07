@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.mipresupuesto.personalbudget.application.entityassembler.EntityAssembler;
 import com.mipresupuesto.personalbudget.application.service.interfaces.CreateBudgetUseCase;
+import com.mipresupuesto.personalbudget.application.service.specification.BudgetIsForNextYearSpecification;
 import com.mipresupuesto.personalbudget.application.service.specification.isExistBudgetEqualYearPersonSpecification;
 import com.mipresupuesto.personalbudget.application.service.specification.isExistPersonSpecification;
 import com.mipresupuesto.personalbudget.application.service.specification.isExistYearSpecification;
 import com.mipresupuesto.personalbudget.domain.BudgetDomain;
-import com.mipresupuesto.personalbudget.domain.PersonDomain;
 import com.mipresupuesto.personalbudget.entity.BudgetEntity;
 import com.mipresupuesto.personalbudget.infrastructure.repository.interfaces.BudgetRepository;
 
@@ -26,29 +26,27 @@ public  class CreateBudgetUseCaseImpl implements CreateBudgetUseCase{
 	private  BudgetRepository budgetRepository;
 	
 	@Autowired
-	isExistPersonSpecification existPersonS;
+	isExistPersonSpecification isExistPersonS;
 	
 	@Autowired
-	isExistYearSpecification existYearS;
+	isExistYearSpecification isExistYearS;
 	
 	@Autowired
 	isExistBudgetEqualYearPersonSpecification existBudgetEqualYearPersonS;
-//	existe persona y año actuales
-//	
 	
+	@Autowired
+	BudgetIsForNextYearSpecification yearGreaterThanActualS;
 	
 	@Override
 	public  void execute(BudgetDomain budget) {
-		boolean existPerson = existPersonS.isSatisfiedBy(budget.getPerson());
-		boolean existYear = existYearS.isSatisfiedBy(budget.getYear());
+		boolean existPerson = isExistPersonS.isSatisfiedBy(budget.getPerson());
+		boolean existYear = isExistYearS.isSatisfiedBy(budget.getYear());
 		
 		boolean existBudgetEqualYearPerson = existBudgetEqualYearPersonS.isSatisfiedBy(budget);
+		boolean yearGreaterThanActual = yearGreaterThanActualS.isSatisfiedBy(budget);
+
 		
-//		ExisteAno AND ExistePersona 
-//		AND PresupuestoEsParaAnoSiguiente 
-//		AND NOT ExistePresupuestoMismoAnoPersona 
-//		THEN CrearPresupuesto
-		if(existPerson && existYear && !existBudgetEqualYearPerson) {
+		if(existPerson && existYear && !existBudgetEqualYearPerson && yearGreaterThanActual ) {
 			
 			budgetRepository.save(entityAssembler.assembleEntity(budget));
 		}
