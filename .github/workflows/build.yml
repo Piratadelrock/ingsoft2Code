@@ -35,5 +35,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run:
           cd presupuestoIS2Code
-          mvn -f /home/runner/work/presupuestoIS2Code/presupuestoIS2Code/PersonalBudget_Api/pom.xml
+         
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Piratadelrock_presupuestoIS2Code
+          

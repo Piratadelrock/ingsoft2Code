@@ -11,7 +11,8 @@ import com.mipresupuesto.personalbudget.entity.BudgetEntity;
 import com.mipresupuesto.personalbudget.infrastructure.repository.interfaces.BudgetRepository;
 
 @Service
-public class isBudgetEqualYearPersonSpecification extends CompositeSpecification<BudgetDomain>{
+//existe persona y año actuales
+public class isExistBudgetEqualYearPersonSpecification extends CompositeSpecification<BudgetDomain>{
 
 	@Autowired
 	private BudgetRepository budgetRepository;
@@ -30,8 +31,7 @@ public class isBudgetEqualYearPersonSpecification extends CompositeSpecification
 
 	}
 	
-//	existe persona y año actuales
-//	
+
 	
 
 }

@@ -11,6 +11,7 @@ public final class PersonDTOAssembler implements DTOAssembler<PersonDTO, PersonD
 
 	@Override
 	public PersonDomain assembleDomain(PersonDTO dto) {
+		
 	PersonDomain domain = PersonDomainBuilder.get().build();
 		
 		if (dto != null) {
@@ -18,7 +19,6 @@ public final class PersonDTOAssembler implements DTOAssembler<PersonDTO, PersonD
 					.setId(UtilUUID.getUUIDFromString(dto.getId()))
 					.setIdCard(dto.getIdCard())
 					.setFirstName(dto.getFirstName())
-					.setIdCard(dto.getIdCard())
 					.setFirstSurname(dto.getFirstsurname())
 					.setSecondSurname(dto.getSecondSurname())
 					.build();

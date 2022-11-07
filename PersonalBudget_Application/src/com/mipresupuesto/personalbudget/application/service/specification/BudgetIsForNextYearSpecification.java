@@ -17,19 +17,40 @@ public class BudgetIsForNextYearSpecification extends CompositeSpecification<Bud
 
 	@Autowired
 	private BudgetRepository budgetRepository;
+	@Autowired
+	isExistBudgetEqualYearPersonSpecification existBudgetYearPerson;
 	
 	
 	@Override
 	public boolean isSatisfiedBy(BudgetDomain budget) {
+	
+//		Optional<BudgetEntity> budgetIsForNextYear = budgetRepository.findById(budget.getId());
+		
+//		Optional<BudgetEntity> budgetId = budgetRepository.findById(budget.getId());
+		
+//		Optional<BudgetEntity> budgetIdYear = budgetRepository.findAllById(null);
 		
 		
-		Optional<BudgetEntity> budgetIsForNextYear = budgetRepository
-				.findByPersonAndYear(budget.getPerson().getId(),budget.getYear().getId());
-				
-		if(existYearBudget.isPresent()) {
-			return true;
-		}
-
+//		existBudgetYearPerson.isSatisfiedBy(budget)
+		/*
+		 * 
+		 * PresupuestoEsParaAnoSiguiente 
+		 * idBudget 
+		 * 
+		 * person and year == year 
+		 * 
+		 * si es igual a este y este otro entonces manda true, o false entonces con esto tendriamos si el año es o no es permitido crear
+		 * */
+		
+//		Optional<BudgetEntity> budgetExistPerson = 
+//				budgetRepository
+//				.findByPersonAndYear(budget.getPerson().getId(), budget.getYear().getId());
+//
+//				
+//		if(budgetIsForNextYear.isPresent()) {
+//			return true;
+//		}
+//
 		return false;
 	}
 

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.mipresupuesto.personalbudget.application.entityassembler.EntityAssembler;
 import com.mipresupuesto.personalbudget.application.service.interfaces.CreateBudgetUseCase;
-import com.mipresupuesto.personalbudget.application.service.specification.isBudgetEqualYearPersonSpecification;
+import com.mipresupuesto.personalbudget.application.service.specification.isExistBudgetEqualYearPersonSpecification;
 import com.mipresupuesto.personalbudget.application.service.specification.isExistPersonSpecification;
 import com.mipresupuesto.personalbudget.application.service.specification.isExistYearSpecification;
 import com.mipresupuesto.personalbudget.domain.BudgetDomain;
@@ -32,8 +32,9 @@ public  class CreateBudgetUseCaseImpl implements CreateBudgetUseCase{
 	isExistYearSpecification existYearS;
 	
 	@Autowired
-	isBudgetEqualYearPersonSpecification budgetEqualYearPersonS;
-	
+	isExistBudgetEqualYearPersonSpecification existBudgetEqualYearPersonS;
+//	existe persona y año actuales
+//	
 	
 	
 	@Override
@@ -41,10 +42,13 @@ public  class CreateBudgetUseCaseImpl implements CreateBudgetUseCase{
 		boolean existPerson = existPersonS.isSatisfiedBy(budget.getPerson());
 		boolean existYear = existYearS.isSatisfiedBy(budget.getYear());
 		
-//		boolean budgetEqualYearPerson = budgetEqualYearPersonS.isSatisfiedBy(budget);
+		boolean existBudgetEqualYearPerson = existBudgetEqualYearPersonS.isSatisfiedBy(budget);
 		
-		 
-		if(existPerson && existYear) {
+//		ExisteAno AND ExistePersona 
+//		AND PresupuestoEsParaAnoSiguiente 
+//		AND NOT ExistePresupuestoMismoAnoPersona 
+//		THEN CrearPresupuesto
+		if(existPerson && existYear && !existBudgetEqualYearPerson) {
 			
 			budgetRepository.save(entityAssembler.assembleEntity(budget));
 		}
