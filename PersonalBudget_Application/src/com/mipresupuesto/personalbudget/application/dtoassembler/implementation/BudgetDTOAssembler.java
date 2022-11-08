@@ -27,14 +27,11 @@ public final class BudgetDTOAssembler implements DTOAssembler<BudgetDTO, BudgetD
 		BudgetDTO dto = new BudgetDTO();
 		
 		if (domain != null) {
-			dto = new BudgetDTO(
-					domain.getPerson(),
-					domain.getYear()
+			dto = 
+			new BudgetDTO(
+
 					);
-					
-					
-					
-					
+				
 		} 
 
 		return dto;

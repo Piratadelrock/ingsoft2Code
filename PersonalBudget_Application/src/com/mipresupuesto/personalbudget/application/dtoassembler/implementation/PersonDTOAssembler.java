@@ -32,11 +32,12 @@ public final class PersonDTOAssembler implements DTOAssembler<PersonDTO, PersonD
 	@Override
 	public final PersonDTO assembleDTO(PersonDomain domain) {
 		
-		PersonDTO dto = new PersonDTO(null, null, null, null, null);
+		PersonDTO dto = new PersonDTO();
 		
 		if (domain != null) {
-			dto = new YearDTO(UtilUUID
-					.getStringFromUUID(domain.getId()),domain.getYear());
+			dto = new PersonDTO(
+					
+					);
 		} 
 		
 

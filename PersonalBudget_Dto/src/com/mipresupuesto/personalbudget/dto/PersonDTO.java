@@ -14,7 +14,7 @@ public final class PersonDTO {
 	private String lastName;
 	private String completeName;
 
-	private PersonDTO() {
+	public PersonDTO() {
 		setId("");
 		setIdCard("");
 		setFirstName("");
