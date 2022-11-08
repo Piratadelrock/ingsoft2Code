@@ -21,7 +21,7 @@ public final class YearEntity {
 	private int year;
 	
 	public YearEntity() {
-//		setId("");
+
 		setYear(0);
 	}
 	
