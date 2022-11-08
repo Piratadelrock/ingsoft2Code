@@ -53,3 +53,14 @@ No connection string provided
 Action:
 Please provide connection string.
 
+2022-11-07 23:06:23.470-05:00 ERROR c.m.applicationinsights.agent - 
+*************************
+Application Insights Java Agent 3.4.2 startup failed (PID 5092)
+*************************
+
+Description:
+No connection string provided
+
+Action:
+Please provide connection string.
+

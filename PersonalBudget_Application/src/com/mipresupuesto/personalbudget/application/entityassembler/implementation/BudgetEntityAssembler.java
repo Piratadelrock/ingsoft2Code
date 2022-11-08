@@ -6,10 +6,12 @@ import com.mipresupuesto.personalbudget.application.entityassembler.EntityAssemb
 import com.mipresupuesto.personalbudget.domain.BudgetDomain;
 import com.mipresupuesto.personalbudget.domain.builder.BudgetDomainBuilder;
 import com.mipresupuesto.personalbudget.entity.BudgetEntity;
+import com.mipresupuesto.personalbudget.entity.YearEntity;
 
 @Component
 public class BudgetEntityAssembler implements EntityAssembler<BudgetEntity, BudgetDomain>{
 
+	
 	@Override
 	public BudgetDomain assembleDomain(BudgetEntity entity) {
 		BudgetDomain domain = BudgetDomainBuilder.get().build();
@@ -17,11 +19,9 @@ public class BudgetEntityAssembler implements EntityAssembler<BudgetEntity, Budg
 		if(entity != null) {
 			domain = BudgetDomainBuilder.get()
 					.setId(entity.getId())
-					
 					.build();
 		}
-		
-	
+
 		return domain;
 	}
 

@@ -21,8 +21,7 @@ public class YearEntityAssembler implements EntityAssembler<YearEntity, YearDoma
 					.setYear(entity.getYear())
 					.build();
 		}
-		
-	
+
 		return domain;
 	}
 
