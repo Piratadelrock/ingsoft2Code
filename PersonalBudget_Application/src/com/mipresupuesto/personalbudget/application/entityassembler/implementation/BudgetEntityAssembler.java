@@ -6,7 +6,6 @@ import com.mipresupuesto.personalbudget.application.entityassembler.EntityAssemb
 import com.mipresupuesto.personalbudget.domain.BudgetDomain;
 import com.mipresupuesto.personalbudget.domain.builder.BudgetDomainBuilder;
 import com.mipresupuesto.personalbudget.entity.BudgetEntity;
-import com.mipresupuesto.personalbudget.entity.YearEntity;
 
 @Component
 public class BudgetEntityAssembler implements EntityAssembler<BudgetEntity, BudgetDomain>{
