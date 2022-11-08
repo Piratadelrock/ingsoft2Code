@@ -89,6 +89,7 @@ public final class PersonDomain {
 	public final String getName() {
 		return (getFirstName() + " " + getMiddleName()).trim();
 	}
+	
 	public final String getLastName() {
 		return (getFirstSureName() + " " + getSecondSureName()).trim();
 	}

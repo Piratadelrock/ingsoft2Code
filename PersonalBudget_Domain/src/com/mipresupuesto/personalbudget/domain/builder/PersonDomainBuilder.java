@@ -11,7 +11,7 @@ public final class PersonDomainBuilder {
 	private String idCard;
 	private String firstName;
 	private String middleName;
-//	private String lastName;
+	private String lastName;
 
 	private String firstSurname;
 	private String secondSurname;
@@ -21,6 +21,7 @@ public final class PersonDomainBuilder {
 		setIdCard("");
 		setFirstName("");
 		setMiddleName("");
+		setLastName("");
 		setFirstSurname("");
 		setSecondSurname("");
 	}
@@ -48,6 +49,15 @@ public final class PersonDomainBuilder {
 
 	private final String getSecondSurname() {
 		return secondSurname;
+	}
+
+	public final String getLastName() {
+		return lastName;
+	}
+
+	public final PersonDomainBuilder setLastName(String lastName) {
+		this.lastName = (lastName == null) ? "" : lastName.trim();
+		return this;
 	}
 
 	public final PersonDomainBuilder setId(final UUID id) {

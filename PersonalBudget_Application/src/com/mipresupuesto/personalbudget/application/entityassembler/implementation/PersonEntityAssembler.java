@@ -22,14 +22,16 @@ public class PersonEntityAssembler implements EntityAssembler<PersonEntity, Pers
 					.setId(entity.getId())
 					.setIdCard(entity.getIdCard())
 					.setFirstName(entity.getFirstName())
+					.setLastName(entity.getLastName())
 					.setMiddleName(entity.getMiddleName())
-					.build()
-					;
+			
+					.build();
 		}
 		
 	
 		return domain;
 	}
+	
 	@Override
 	public PersonEntity assembleEntity(PersonDomain domain) {
 		
@@ -41,11 +43,10 @@ public class PersonEntityAssembler implements EntityAssembler<PersonEntity, Pers
 					domain.getIdCard(),
 					domain.getFirstName(),
 					domain.getMiddleName(),
+					domain.getLastName(),
 					domain.getFirstSureName(),
 					domain.getSecondSureName());
 		}
-	
-	
 		return entity;
 	}
 }

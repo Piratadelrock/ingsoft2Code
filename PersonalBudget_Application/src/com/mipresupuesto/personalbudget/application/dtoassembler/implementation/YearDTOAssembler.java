@@ -25,7 +25,7 @@ public final class YearDTOAssembler implements DTOAssembler<YearDTO, YearDomain>
 
 	@Override
 	public final YearDTO assembleDTO(final YearDomain domain) {
-		// TODO Auto-generated method stub
+	
 		YearDTO dto = new YearDTO();
 		
 		if (domain != null) {
