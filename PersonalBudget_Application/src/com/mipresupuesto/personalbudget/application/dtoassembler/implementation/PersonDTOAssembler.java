@@ -30,7 +30,7 @@ public final class PersonDTOAssembler implements DTOAssembler<PersonDTO, PersonD
 	}
 
 	@Override
-	public PersonDTO assembleDTO(PersonDomain domain) {
+	public final PersonDTO assembleDTO(PersonDomain domain) {
 		
 		PersonDTO dto = new PersonDTO(null, null, null, null, null);
 		

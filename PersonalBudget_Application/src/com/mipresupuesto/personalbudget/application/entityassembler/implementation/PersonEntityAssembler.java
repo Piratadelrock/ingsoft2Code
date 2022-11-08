@@ -24,7 +24,6 @@ public class PersonEntityAssembler implements EntityAssembler<PersonEntity, Pers
 					.setFirstName(entity.getFirstName())
 					.setLastName(entity.getLastName())
 					.setMiddleName(entity.getMiddleName())
-			
 					.build();
 		}
 		

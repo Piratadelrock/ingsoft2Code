@@ -30,7 +30,9 @@ public final class YearDTOAssembler implements DTOAssembler<YearDTO, YearDomain>
 		
 		if (domain != null) {
 			dto = new YearDTO(UtilUUID
-					.getStringFromUUID(domain.getId()),domain.getYear());
+					.getStringFromUUID(
+							domain.getId()),
+							domain.getYear());
 		} 
 
 		return dto;
